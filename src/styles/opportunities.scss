@@ -1,0 +1,85 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.opportunities {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+
+  @include section-spacing;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    @include on-desktop {
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+}
+
+.card {
+  width: 280px;
+  height: 420px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include on-tablet {
+    width: 392px;
+    height: 511px;
+    gap: 32px;
+  }
+
+  @include on-desktop {
+    width: 324px;
+    height: 471px;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 280px;
+    height: 277px;
+    transition: transform $animation-speed;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include on-tablet {
+      width: 392px;
+      height: 387px;
+    }
+
+    @include on-desktop {
+      width: 324px;
+      height: 320px;
+    }
+  }
+
+  &__info {
+    display: block;
+    text-align: center;
+
+    &--name {
+      margin: 0;
+      color: $main-accent-color;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      letter-spacing: 0;
+    }
+
+    &--description {
+      margin: 0;
+      font-family: $secondary-font;
+
+      @include font-values-main;
+    }
+  }
+}

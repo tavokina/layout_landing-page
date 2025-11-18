@@ -1,0 +1,38 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  background-image: url(../images/img-main.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $text-dark-color;
+  padding: 25px 0;
+
+  @include content-padding-inline;
+
+  &__title {
+    margin: 0;
+    color: $text-main-color;
+    text-align: center;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    font-size: 40px;
+    height: 70%;
+
+    @include on-tablet {
+      font-size: 64px;
+    }
+
+    @include on-desktop {
+      font-size: 80px;
+    }
+  }
+}
