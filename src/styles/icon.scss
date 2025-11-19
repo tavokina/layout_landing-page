@@ -4,6 +4,8 @@
 .icon {
   height: 24px;
   width: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include on-tablet {
     height: 32px;
@@ -15,7 +17,6 @@
 
   &--menu {
     background-image: url(../icons/icon-burger-menu.svg);
-    background-repeat: no-repeat;
 
     &:hover {
       background-image: url(../icons/icon-burger-menu-hover.svg);
@@ -29,7 +30,7 @@
   &__tooltip {
     position: absolute;
     top: 0;
-    right: 120px;
+    right: 150px;
 
     display: flex;
     flex-direction: column;

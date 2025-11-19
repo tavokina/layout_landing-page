@@ -6,20 +6,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  // margin-bottom: 50px;
   position: relative;
+  margin-bottom: 40px;
+
+  @include on-tablet {
+    margin-bottom: 55px;
+  }
 
   &__icons {
     display: flex;
     gap: 24px;
-
-    // box-sizing: border-box;
   }
 
   &__logo {
     display: block;
-    max-width: 64px;
+    width: 64px;
     height: auto;
+
+    @include on-tablet {
+      width: 87px;
+    }
   }
 }
