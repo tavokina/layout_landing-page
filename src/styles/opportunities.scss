@@ -48,7 +48,7 @@
     transition: transform $animation-speed;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.04);
     }
 
     @include on-tablet {

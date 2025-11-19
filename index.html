@@ -687,6 +687,7 @@
               placeholder="John Smith"
               aria-label="Name"
               autocomplete="name"
+              required
             >
             <input
               type="email"
@@ -695,6 +696,7 @@
               placeholder="email@example.com"
               aria-label="Email"
               autocomplete="email"
+              required
             >
             <textarea
               class="
@@ -705,12 +707,13 @@
               placeholder="Hello, I would like to..."
               aria-label="Message"
               autocomplete="on"
+              required
             ></textarea>
             <button
               class="
               button
               button--secondary"
-              type="button"
+              type="button" onclick="this.closest('form').reset()"
             >
               Send
             </button>
