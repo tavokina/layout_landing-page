@@ -5,6 +5,7 @@
   position: relative;
   z-index: 1;
   box-sizing: border-box;
+  max-width: $max-width;
 
   @include section-spacing;
 

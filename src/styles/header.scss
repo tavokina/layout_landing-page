@@ -26,6 +26,7 @@
     letter-spacing: -1.5px;
     font-size: 40px;
     height: 70%;
+    max-width: $max-width;
 
     @include on-tablet {
       font-size: 64px;
