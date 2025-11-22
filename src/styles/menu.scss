@@ -3,7 +3,6 @@
 
 .menu {
   box-sizing: border-box;
-  padding-top: 25px;
   height: 100vh;
   background-color: $main-accent-color;
   color: $text-main-color;
@@ -11,14 +10,6 @@
   font-weight: 700;
   transition: opacity $animation-speed;
   overflow: auto; /* to scroll the menu if needed */
-
-  &__top {
-    position: sticky; /* to keep cross always visible */
-    top: 0;
-    z-index: 1;
-  }
-
-  @include content-padding-inline;
 
   position: fixed;
   top: 0;
@@ -32,15 +23,33 @@
     pointer-events: all;
   }
 
+  &__top {
+    position: sticky; /* to keep cross always visible */
+    top: 0;
+    z-index: 1;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    display: grid;
+    row-gap: 25px;
+    padding-block: 25px;
+
+    @include content-padding-inline;
+
+    @include on-tablet {
+      padding-block: 50px;
+      row-gap: 50px;
+    }
+  }
+
   &__contacts {
-    margin-top: 32px;
+    @include font-values-main;
+
     padding: 0;
     display: flex;
     flex-direction: column;
-    max-width: $max-width;
-
-    @include font-values-main;
-
     font-weight: 600;
 
     &--title {

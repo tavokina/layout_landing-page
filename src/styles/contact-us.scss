@@ -2,25 +2,19 @@
 @use './mixins' as *;
 
 .contact-us {
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  max-width: $max-width;
+  @include section-spacing;
 
   &__wrapper {
     @include page-grid;
 
-    gap: 48px;
+    max-width: $content-max-width;
+    gap: $inner-gap;
   }
 
   &__container {
     grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+
+    @include section-spacing;
 
     @include on-tablet {
       grid-column: span 3;

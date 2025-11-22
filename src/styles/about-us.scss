@@ -2,11 +2,6 @@
 @use './mixins' as *;
 
 .about-us {
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-  max-width: $max-width;
-
   @include page-grid;
 
   align-items: start;

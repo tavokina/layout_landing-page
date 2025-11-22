@@ -2,20 +2,31 @@
 @use './mixins' as *;
 
 .header {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
-
+  box-sizing: border-box;
   background-image: url(../images/img-main.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: $text-dark-color;
-  padding: 25px 0;
 
-  @include content-padding-inline;
+  &__content {
+    height: inherit;
+    margin: 0 auto;
+    max-width: $content-max-width;
+
+    display: grid;
+    row-gap: 25px;
+    padding-block: 25px;
+    align-content: space-between;
+
+    @include content-padding-inline;
+
+    @include on-tablet {
+      padding-block: 50px;
+      row-gap: 50px;
+    }
+  }
 
   &__title {
     margin: 0;
@@ -25,8 +36,8 @@
     line-height: 100%;
     letter-spacing: -1.5px;
     font-size: 40px;
-    height: 70%;
-    max-width: $max-width;
+    height: 70vh;
+    max-width: $content-max-width;
 
     @include on-tablet {
       font-size: 64px;

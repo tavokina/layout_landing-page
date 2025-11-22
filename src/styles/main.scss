@@ -2,18 +2,24 @@
 @use './mixins' as *;
 
 .main {
-  box-sizing: border-box;
-  display: grid;
-  row-gap: 100px;
-  padding-block: 100px;
   background: $text-main-color;
-  z-index: 1;
 
-  @include content-padding-inline;
+  &__content {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    box-sizing: border-box;
+    justify-content: center;
 
-  @include on-tablet {
-    padding-block: 140px;
-    row-gap: 140px;
+    @include content-padding-inline;
+
+    display: grid;
+    row-gap: 100px;
+    padding-block: 100px;
+
+    @include on-tablet {
+      padding-block: 140px;
+      row-gap: 140px;
+    }
   }
 
   &__title {
@@ -37,7 +43,6 @@
     }
 
     @include on-desktop {
-      font-size: 48px;
       grid-column: 1 / 6;
     }
 

@@ -2,8 +2,9 @@
 @use './mixins' as *;
 
 .button {
+  width: auto;
+  padding: 0;
   height: 56px;
-  width: 280px;
   font-family: $main-font;
 
   @include font-values-main;
@@ -11,17 +12,19 @@
   font-weight: 600;
   border: none;
   text-align: center;
-  margin: 0 auto;
   background-color: $main-accent-color;
   color: $text-main-color;
   transition: background-color $animation-speed;
 
-  @include on-tablet {
-    width: 310px;
-  }
+  &--view {
+    @include on-tablet {
+      margin: 0 auto;
+      width: 392px;
+    }
 
-  @include on-desktop {
-    width: 410px;
+    @include on-desktop {
+      width: 324px;
+    }
   }
 
   &:hover {

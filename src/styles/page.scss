@@ -8,8 +8,6 @@
 
   &__body {
     margin: 0;
-    position: relative;
-    background: $text-main-color;
   }
   &:has(.page__menu:target) {
     overflow: hidden;

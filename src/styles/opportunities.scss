@@ -2,19 +2,13 @@
 @use './mixins' as *;
 
 .opportunities {
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-  max-width: $max-width;
-
   @include section-spacing;
 
   &__item {
-    display: flex;
-    flex-direction: column;
+    @include section-spacing;
+
     justify-content: center;
     align-items: center;
-    gap: 48px;
 
     @include on-desktop {
       flex-direction: row;
