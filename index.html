@@ -688,6 +688,7 @@
             <form
               action="#"
               class="inputs-block"
+              onsubmit="this.reset(); return false;"
             >
               <input
                 type="text"
@@ -720,7 +721,7 @@
               ></textarea>
               <button
                 class="button"
-                type="button" onclick="this.closest('form').reset()"
+                type="submit"
               >
                 Send
               </button>

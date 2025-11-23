@@ -13,7 +13,9 @@
   text-align: center;
   background-color: $main-accent-color;
   color: $text-main-color;
-  transition: background-color $animation-speed;
+  transition:
+    background-color $animation-speed,
+    transform $animation-speed;
 
   &--view {
     @include on-tablet {
@@ -28,6 +30,7 @@
 
   &:hover {
     background-color: $button-hover-color;
+    transform: scale(1.04);
   }
 
   &:active {
