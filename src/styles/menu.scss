@@ -33,33 +33,37 @@
     margin: 0 auto;
     max-width: $content-max-width;
     display: grid;
-    row-gap: 25px;
-    padding-block: 25px;
+    grid-template-rows: min-content;
+    row-gap: 32px;
+    padding-top: 25px;
 
     @include content-padding-inline;
 
     @include on-tablet {
-      padding-block: 50px;
-      row-gap: 50px;
+      padding-top: 50px;
+    }
+
+    @include on-desktop {
+      row-gap: $inner-gap;
     }
   }
 
   &__contacts {
-    @include font-values-main;
+    @include font-values-main(600, 16px);
 
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
+    margin: 0;
 
-    &--title {
-      margin: 0;
-      display: block;
-    }
+    @include section-spacing(8px);
+  }
+
+  &__title {
+    margin: 0;
+    display: block;
   }
 
   &__link {
-    margin-bottom: 8px;
+    margin: 0;
     text-decoration: none;
     color: inherit;
     transition: color $animation-speed;
@@ -70,10 +74,14 @@
   }
 
   &__call-to-order {
+    margin-top: 8px;
     width: fit-content;
     text-decoration: none;
     color: $text-main-color;
     position: relative;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
 
     &::after {
       content: '';

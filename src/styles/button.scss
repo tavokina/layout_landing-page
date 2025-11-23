@@ -7,9 +7,8 @@
   height: 56px;
   font-family: $main-font;
 
-  @include font-values-main;
+  @include font-values-main(600, 16px);
 
-  font-weight: 600;
   border: none;
   text-align: center;
   background-color: $main-accent-color;

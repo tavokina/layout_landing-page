@@ -12,9 +12,6 @@
 
   &__content {
     height: inherit;
-    margin: 0 auto;
-    max-width: $content-max-width;
-
     display: grid;
     row-gap: 25px;
     padding-block: 25px;
@@ -25,26 +22,6 @@
     @include on-tablet {
       padding-block: 50px;
       row-gap: 50px;
-    }
-  }
-
-  &__title {
-    margin: 0;
-    color: $text-main-color;
-    text-align: center;
-    font-weight: 600;
-    line-height: 100%;
-    letter-spacing: -1.5px;
-    font-size: 40px;
-    height: 70vh;
-    max-width: $content-max-width;
-
-    @include on-tablet {
-      font-size: 64px;
-    }
-
-    @include on-desktop {
-      font-size: 80px;
     }
   }
 }

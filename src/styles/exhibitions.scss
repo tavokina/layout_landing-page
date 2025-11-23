@@ -2,8 +2,10 @@
 @use './mixins' as *;
 
 .exhibitions {
+  box-sizing: border-box;
+
   &__wrapper {
-    @include section-spacing;
+    @include section-spacing(48px);
 
     margin-top: $inner-gap;
   }
@@ -102,7 +104,7 @@
   &__info {
     margin: 0;
 
-    @include font-values-main;
+    @include font-values-main(400, 16px);
 
     &--name {
       margin: 0;
